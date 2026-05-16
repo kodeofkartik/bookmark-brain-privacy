@@ -1,3 +1,8 @@
+---
+layout: default
+title: Privacy Policy — Bookmark Brain
+---
+
 # Privacy Policy — Bookmark Brain
 
 **Last updated: 2026-05-16**
@@ -20,16 +25,16 @@ Bookmark Brain is a Chrome extension that organises, deduplicates, and searches 
 |---|---|---|
 | Organise | Uses Chrome's built-in on-device AI (Prompt API) | No |
 | Deduplicate | Runs locally in your browser | No |
-| Dead Links | Sends HTTP requests directly from your browser to check if URLs respond | No — requests go from your browser to the bookmarked sites only |
+| Dead Links | Sends HTTP requests directly from your browser to check if URLs respond | No |
 | Search | Uses Chrome's built-in on-device AI (Prompt API) | No |
 
 ## Data Stored Locally
 
 The extension stores the following data locally on your device only, using Chrome's built-in storage APIs:
 
-- **Backup data**: A JSON snapshot of your bookmark positions before any reorganisation, stored in `chrome.storage.local`. This is used solely to power the "Undo Last Organize" feature.
+- **Backup data**: A JSON snapshot of your bookmark positions before any reorganisation, stored in `chrome.storage.local`. Used solely to power the "Undo Last Organize" feature.
 - **Pending proposed structure**: A temporary proposed folder structure, stored in `chrome.storage.session` and cleared when you apply or discard it.
-- **System folder registry**: A list of Chrome system folder IDs (e.g. Other Bookmarks) used to exclude them from processing, stored in `chrome.storage.local`.
+- **System folder registry**: A list of Chrome system folder IDs used to exclude them from processing, stored in `chrome.storage.local`.
 
 All locally stored data can be cleared at any time via `chrome://extensions` → Bookmark Brain → **Clear data**.
 
@@ -39,9 +44,9 @@ All locally stored data can be cleared at any time via `chrome://extensions` →
 |---|---|
 | `bookmarks` | To read, organise, move, and delete your bookmarks |
 | `storage` | To save backup data and settings locally on your device |
-| `host_permissions` (optional, user-granted) | To check whether bookmarked URLs are still reachable (Dead Links feature only) |
+| `host_permissions` (optional) | To check whether bookmarked URLs are still reachable (Dead Links feature only) |
 
-The `host_permissions` permission is optional and only requested when you click "Check Dead Links". It is never used to read page content — only to verify that a URL responds.
+The `host_permissions` permission is optional and only requested when you click "Check Dead Links". It is never used to read page content.
 
 ## Third Parties
 
@@ -57,4 +62,4 @@ If this policy changes, the updated version will be posted at this URL with a re
 
 ## Contact
 
-For questions or concerns, contact: **kartikshukla400@gmail.com**
+For questions or concerns: **kartikshukla400@gmail.com**
